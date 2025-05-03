@@ -15,7 +15,14 @@ Our project has a clear structure:
 - Explain the project in `README.md`
 - Include license details in the `LICENSE` file
 - Store GitHub workflows in `.github/`
+- Document all public functions and types
 - And of course, you're reading the `.windsurfrules` file now!
+
+## How We Code
+- Follow the official Rust Style Guide which are idiomatic, clear, and concise
+- Follow Clean Code principles
+- Make sure to changes other similar code if doing refactoring
+- Make the code simple, do not overcomplicate things
 
 ## How We Name Our Branches
 
@@ -141,4 +148,17 @@ We follow Semantic Versioning:
 - Bump the PATCH version when fixing bugs compatibly
 
 ## Custom Command
-- "CC" : means commit with context by changes (new file and modified file)
+- "CC" : means commit with context by changes (new file and modified file). If there are mre than one context, make it as multiple commit with individual context
+
+## Custom Rules
+
+### Git
+
+- Commit before push.
+   - always run `cargo fmt`.
+   - run cargo test.
+   - mark current changes context in TODO.md file.
+
+### Test
+
+- If cargo test fail, fix it and rerun until success.

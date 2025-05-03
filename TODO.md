@@ -9,9 +9,9 @@ This document tracks the progress of building an in-memory key-value database in
     - [x] Set up the recommended directory structure (src/, tests/, etc.)
     - [x] Add a README.md describing your project goals
 
-- [ ] **2. Core Data Structure**
-    - [ ] Design and implement the basic in-memory key-value store (e.g., using HashMap)
-    - [ ] Implement basic operations: SET, GET, DELETE
+- [x] **2. Core Data Structure**
+    - [x] Design and implement the basic in-memory key-value store (e.g., using HashMap)
+    - [x] Implement basic operations: SET, GET, DELETE
 
 - [ ] **3. Command-Line Interface (CLI)**
     - [ ] Create a simple CLI to interact with your DB (REPL: Read-Eval-Print Loop)
