@@ -1,0 +1,144 @@
+# WindSurf Rules for Our Rust Project
+
+Welcome to our Rust project! This guide helps everyone stay on the same page about how we work together. Think of it as our shared handbook for collaboration.
+
+## How We Organize Our Files
+
+Our project has a clear structure:
+- Put all source code in the `src/` folder
+- Keep tests in the `tests/` folder
+- Share examples in the `examples/` folder
+- Store benchmarks in the `benches/` folder
+- Maintain documentation in the `docs/` folder
+- Use `Cargo.toml` for dependencies and project info
+- Let `Cargo.lock` track exact dependency versions
+- Explain the project in `README.md`
+- Include license details in the `LICENSE` file
+- Store GitHub workflows in `.github/`
+- And of course, you're reading the `.windsurfrules` file now!
+
+## How We Name Our Branches
+
+When creating a new branch, please name it based on what you're working on:
+- For new features: `feature/123-add-cool-thing` (where 123 is the issue number)
+- For bug fixes: `bugfix/123-fix-that-problem`
+- For urgent fixes: `hotfix/123-critical-fix`
+- For releases: `release/v1.2.3`
+
+## How We Write Commit Messages
+
+Please format your commit messages like this:
+
+```
+[type]: What you did in a short phrase
+
+More details about what you did and why, if needed.
+
+Issue: #123
+```
+
+For the type, choose one of these:
+- `feat` when adding something new
+- `fix` when fixing a bug
+- `refactor` when improving existing code
+- `test` when adding tests
+- `docs` when updating documentation
+- `chore` for routine tasks
+- `perf` for performance improvements
+- `style` for formatting and style changes
+- `ci` for changes to our CI/CD pipeline
+
+## How We Write Code
+
+We believe in writing clean, maintainable Rust code:
+1. Follow the official Rust Style Guide
+2. Always run `cargo fmt` before committing
+3. Make sure your code passes `cargo clippy` checks
+4. Document all public functions and types
+5. Use these naming conventions:
+   - `snake_case` for variables, functions, and files
+   - `UpperCamelCase` for types, traits, and enums
+   - `SCREAMING_SNAKE_CASE` for constants
+6. Use Rust expressive type system and derive traits when it makes sense
+7. Write idiomatic Rust - embrace the languages patterns
+
+## How We Test Our Code
+
+Good testing makes for reliable software:
+1. Write tests for all public functions
+2. Aim to cover at least 80% of the code
+3. Include integration tests for key features
+4. Run tests with `cargo test`
+5. Write clear test descriptions
+6. Remember to test edge cases
+
+## How We Handle Pull Requests
+
+When contributing code:
+1. Create a properly named branch
+2. Make your changes with good commit messages
+3. Run `cargo test` to make sure everything works
+4. Clean up your code with `cargo fmt` and `cargo clippy`
+5. Update any relevant documentation
+6. Open a pull request with a clear description
+7. Link to any related issues
+8. Wait for the CI checks to pass
+9. Ask for a review from a team member
+10. Address any feedback you receive
+11. A maintainer will merge your code when it is ready
+
+## How We Release New Versions
+
+When it is time for a new release:
+1. Create a release branch like `release/v1.2.3`
+2. Update the version number in `Cargo.toml`
+3. Update the `CHANGELOG.md` with what is new
+4. Create a pull request for the release
+5. After merging, tag the release on GitHub
+6. Publish to crates.io if appropriate
+
+## How We Handle Dependencies
+
+Dependencies need careful management:
+1. Keep dependencies up to date
+2. Regularly check for security issues with `cargo audit`
+3. Do not add dependencies unless they are really needed
+4. Choose well-maintained crates
+5. Use semantic versioning in your dependency specifications
+
+## How We Think About Performance
+
+Rust excels at performance when used well:
+1. Use Rust zero-cost abstractions
+2. Be mindful of memory allocations
+3. Benchmark critical code with `cargo bench`
+4. Choose appropriate data structures
+5. Consider async/await for I/O operations
+
+## How We Approach Security
+
+Security matters in every project:
+1. Follow OWASP security guidelines
+2. Run `cargo audit` regularly
+3. Avoid `unsafe` code when possible
+4. If you must use `unsafe`, explain why in comments
+5. Always validate user input
+
+## How We Document Our Work
+
+Good documentation helps everyone:
+1. Use rustdoc comments for all public APIs
+2. Include examples in your documentation
+3. Keep the README updated and helpful
+4. Document changes in the CHANGELOG
+5. Write clearly and concisely
+
+## How We Version Our Software
+
+We follow Semantic Versioning:
+- Bump the MAJOR version when making incompatible API changes
+- Bump the MINOR version when adding features compatibly
+- Bump the PATCH version when fixing bugs compatibly
+
+## Custom Command
+- "CC" : means commit with context by changes (new file and modified file)
